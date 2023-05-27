@@ -16,3 +16,8 @@
   }
 
 
+  .loading-img {
+    background: url(https://img-2s2.pages.dev/img/头像.jpg) no-repeat center center;
+    background-size: cover;
+  }
+
