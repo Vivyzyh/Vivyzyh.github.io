@@ -24,6 +24,44 @@
     
     <entry>
       <title>jQuery</title>
+      <link href="/2023/06/07/2023-6-6-jQuery%E4%BA%8B%E4%BB%B6/"/>
+      <url>/2023/06/07/2023-6-6-jQuery%E4%BA%8B%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="jQuery事件"><a href="#jQuery事件" class="headerlink" title="jQuery事件"></a>jQuery事件</h2><p>页面对不同访问者的响应叫做事件。</p><p>事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。</p><h2 id="jQuery事件方法语法"><a href="#jQuery事件方法语法" class="headerlink" title="jQuery事件方法语法"></a>jQuery事件方法语法</h2><p>在 jQuery 中，大多数 DOM 事件都有一个等效的 jQuery 方法。<br>页面中指定一个点击事件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;p&quot;</span>).click();</span><br></pre></td></tr></table></figure><br>下一步是定义了点击事件后触发事件，您可以通过一个事件函数实现<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;p&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">   // 动作触发后执行的代码!!</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p><h4 id="click"><a href="#click" class="headerlink" title="click()"></a>click()</h4><p>click() 方法是当按钮点击事件被触发时会调用一个函数。</p><p>该函数在用户点击 HTML 元素时执行。</p><p>在下面的实例中，当点击事件在某个 <p> 元素上触发时，隐藏当前的 <p> 元素：</p><h5 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;p&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"> $(this).hide();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h4 id="dblclick"><a href="#dblclick" class="headerlink" title="dblclick()"></a>dblclick()</h4><p>当双击元素时，会发生 dblclick 事件。</p><p>dblclick() 方法触发 dblclick 事件，或规定当发生 dblclick 事件时运行的函数：</p><h5 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;p&quot;</span>).dblclick(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"> $(this).hide();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h4 id="mouseenter"><a href="#mouseenter" class="headerlink" title="mouseenter()"></a>mouseenter()</h4><p>当鼠标指针穿过元素时，会发生 mouseenter 事件。</p><p>mouseenter() 方法触发 mouseenter 事件，或规定当发生 mouseenter 事件时运行的函数:</p><h5 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#p1&quot;</span>).mouseenter(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">   alert(<span class="string">&#x27;您的鼠标移到了 id=&quot;p1&quot; 的元素上!&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> jQuery </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jQuery</title>
+      <link href="/2023/06/07/2023-6-6-jQuery%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+      <url>/2023/06/07/2023-6-6-jQuery%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="jQuery-选择器"><a href="#jQuery-选择器" class="headerlink" title="jQuery 选择器"></a>jQuery 选择器</h2><p>jQuery 选择器允许您对 HTML 元素组或单个元素进行操作。</p><p>jQuery 选择器基于元素的 id、类、类型、属性、属性值等”查找”（或选择）HTML 元素。 它基于已经存在的 CSS 选择器，除此之外，它还有一些自定义的选择器。</p><p>jQuery 中所有选择器都以美元符号开头：$()。</p><h2 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h2><p>选取页面中的全部<p>元素</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;p&quot;</span>)</span><br></pre></td></tr></table></figure><h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>用户点击按钮后，所有<p>元素都隐藏</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">        $(<span class="string">&quot;p&quot;</span>).hide()</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h2><p>jQuery #id 选择器通过 HTML 元素的 id 属性选取指定的元素。</p><p>页面中元素的 id 应该是唯一的，所以您要在页面中选取唯一的元素需要通过 #id 选择器。</p><p>通过 id 选取元素语法如下:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;#id&#x27;</span>)</span><br></pre></td></tr></table></figure><h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>当用户点击按钮后，有 id=”id” 属性的元素将被隐藏：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">        $(<span class="string">&quot;#id&quot;</span>).hide()</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h4 id="点击这里查看更多实例"><a href="#点击这里查看更多实例" class="headerlink" title="点击这里查看更多实例"></a><a href="https://www.runoob.com/jquery/jquery-selectors.html">点击这里查看更多实例</a></h4><h2 id="独立文件中使用-jQuery-函数"><a href="#独立文件中使用-jQuery-函数" class="headerlink" title="独立文件中使用 jQuery 函数"></a>独立文件中使用 jQuery 函数</h2><p>如果您的网站包含许多页面，并且您希望您的 jQuery 函数易于维护，那么请把您的 jQuery 函数放到独立的 .js 文件中。</p><p>当我们在教程中演示 jQuery 时，会将函数直接添加到 <head> 部分中。不过，把它们放到一个单独的文件中会更好，就像这样（通过 src 属性来引用文件）：</p><h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">head</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js&quot;</span>&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;my_jquery_functions.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> jQuery </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jQuery</title>
       <link href="/2023/06/07/2023-6-6-jQuery/"/>
       <url>/2023/06/07/2023-6-6-jQuery/</url>
       
@@ -61,25 +99,6 @@
     
     
     <entry>
-      <title>CSS</title>
-      <link href="/2023/05/27/2023-5-26-css/"/>
-      <url>/2023/05/27/2023-5-26-css/</url>
-      
-        <content type="html"><![CDATA[<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> css </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>HTML5</title>
       <link href="/2023/05/27/2023-5-26-HTML5/"/>
       <url>/2023/05/27/2023-5-26-HTML5/</url>
@@ -99,16 +118,16 @@
     
     
     <entry>
-      <title>Js</title>
-      <link href="/2023/05/27/2023-5-26-js/"/>
-      <url>/2023/05/27/2023-5-26-js/</url>
+      <title>CSS</title>
+      <link href="/2023/05/27/2023-5-26-css/"/>
+      <url>/2023/05/27/2023-5-26-css/</url>
       
-        <content type="html"><![CDATA[<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2>]]></content>
       
       
       <categories>
           
-          <category> JavaScript </category>
+          <category> css </category>
           
       </categories>
       
@@ -137,6 +156,25 @@
     
     
     <entry>
+      <title>Js</title>
+      <link href="/2023/05/27/2023-5-26-js/"/>
+      <url>/2023/05/27/2023-5-26-js/</url>
+      
+        <content type="html"><![CDATA[<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2023/05/25/hello-world/"/>
       <url>/2023/05/25/hello-world/</url>
@@ -153,66 +191,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/cat.css"/>
-      <url>/css/cat.css</url>
-      
-        <content type="html"><![CDATA[body::-webkit-scrollbar {    width: 0;}.neko {    width: 64px;    height: 64px;    background-image: url("https://bu.dusays.com/2022/07/20/62d812db74be9.png");    position: absolute;    right: 32px;    background-repeat: no-repeat;    background-size: contain;    transform: translateX(50%);    cursor: pointer;    font-family: tzy;    font-weight: 600;    font-size: 16px;    color: #6f42c1;    display: none;}.neko::after {    display: none;    width: 100px;    height: 100px;    background-image: url("https://bu.dusays.com/2022/07/20/62d812d95e6f5.png");    background-size: contain;    z-index: 9999;    position: absolute;    right: 50%;    text-align: center;    line-height: 100px;    top: -115%;}.neko.showMsg::after {    content: attr(data-msg);    display: block;    overflow: hidden;    text-overflow: ellipsis;}.neko:hover::after {    content: attr(data-msg);    display: block;    overflow: hidden;    text-overflow: ellipsis;}.neko.fontColor::after {    color: #333;}/** * @description: 滚动条样式  跟猫二选一 */@media screen and (max-width:992px) {    ::-webkit-scrollbar {        width: 8px !important;        height: 8px !important    }    ::-webkit-scrollbar-track {        border-radius: 2em;    }    ::-webkit-scrollbar-thumb {        background-color: rgb(255 255 255 / .3);        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);        border-radius: 2em    }    ::-webkit-scrollbar-corner {        background-color: transparent    }}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于作者</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
         <content type="html"><![CDATA[<!-- GitCalendar容器 贡献栏挂载点 --><div id="gitZone"></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/progress_bar.css"/>
-      <url>/css/progress_bar.css</url>
-      
-        <content type="html"><![CDATA[.pace {    -webkit-pointer-events: none;    pointer-events: none;    -webkit-user-select: none;    -moz-user-select: none;    user-select: none;    z-index: 2000;    position: fixed;    margin: auto;    top: 10px;    left: 0;    right: 0;    height: 8px;    border-radius: 8px;    width: 4rem;    background: #eaecf2;    border: 1px #e3e8f7;    overflow: hidden;  }    .pace-inactive .pace-progress {    opacity: 0;    transition: 0.5s ease-in;  }    .pace .pace-progress {    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;    -ms-box-sizing: border-box;    -o-box-sizing: border-box;    box-sizing: border-box;    -webkit-transform: translate3d(0, 0, 0);    -moz-transform: translate3d(0, 0, 0);    -ms-transform: translate3d(0, 0, 0);    -o-transform: translate3d(0, 0, 0);    transform: translate3d(0, 0, 0);    max-width: 200px;    position: absolute;    z-index: 2000;    display: block;    top: 0;    right: 100%;    height: 100%;    width: 100%;    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);    animation: gradient 1.5s ease infinite;    background-size: 200%;  }    .pace.pace-inactive {    opacity: 0;    transition: 0.5s;    top: -8px;  }  @keyframes gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }  /* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {  background: #1e1e1e;  color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {  background: #3ecdf1;  color: #f2f2f2;}@font-face {  /* 为载入的字体取名字(随意) */  font-family: 'YSHST';  /* 字体文件地址(相对或者绝对路径都可以) */  src: url(/font/WenDaoYiRenTi-2.ttf);  /* 定义加粗样式(加粗多少) */  font-weight: normal;  /* 定义字体样式(斜体/非斜体) */  font-style: normal;  /* 定义显示样式 */  font-display: block;}/* 翻页按钮居中*/#pagination {  width: 100%;  margin: auto;} /* 一级菜单居中 */#nav .menus_items {  position: absolute !important;  width: fit-content !important;  left: 50% !important;  transform: translateX(-50%) !important;}/* 子菜单横向展示 */#nav .menus_items .menus_item:hover .menus_item_child {  display: flex !important;}/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */.menus_items .menus_item:nth-child(2) .menus_item_child {  left: -125px;}/*黑夜霓虹灯*//* 日间模式不生效 */[data-theme="light"] #site-name,[data-theme="light"] #site-title,[data-theme="light"] #site-subtitle,[data-theme="light"] #post-info {  animation: none;}/* 夜间模式生效 */[data-theme="dark"] #site-name,[data-theme="dark"] #site-title {  animation: light_15px 10s linear infinite;}[data-theme="dark"] #site-subtitle {  animation: light_10px 10s linear infinite;}[data-theme="dark"] #post-info {  animation: light_5px 10s linear infinite;}/* 关键帧描述 */@keyframes light_15px {  0% {    text-shadow: #5636ed 0 0 15px;  }  12.5% {    text-shadow: #11ee5e 0 0 15px;  }  25% {    text-shadow: #f14747 0 0 15px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 15px;  }  50% {    text-shadow: #b347f1 0 0 15px;  }  62.5% {    text-shadow: #002afa 0 0 15px;  }  75% {    text-shadow: #ed709b 0 0 15px;  }  87.5% {    text-shadow: #39c5bb 0 0 15px;  }  100% {    text-shadow: #5636ed 0 0 15px;  }}@keyframes light_10px {  0% {    text-shadow: #5636ed 0 0 10px;  }  12.5% {    text-shadow: #11ee5e 0 0 10px;  }  25% {    text-shadow: #f14747 0 0 10px;  }  37.5% {    text-shadow: #f1a247 0 0 10px;  }  50% {    text-shadow: #f1ee47 0 0 10px;  }  50% {    text-shadow: #b347f1 0 0 10px;  }  62.5% {    text-shadow: #002afa 0 0 10px;  }  75% {    text-shadow: #ed709b 0 0 10px;  }  87.5% {    text-shadow: #39c5bb 0 0 10px;  }  100% {    text-shadow: #5636ed 0 0 10px;  }}@keyframes light_5px {  0% {    text-shadow: #5636ed 0 0 5px;  }  12.5% {    text-shadow: #11ee5e 0 0 5px;  }  25% {    text-shadow: #f14747 0 0 5px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 5px;  }  50% {    text-shadow: #b347f1 0 0 5px;  }  62.5% {    text-shadow: #002afa 0 0 5px;  }  75% {    text-shadow: #ed709b 0 0 5px;  }  87.5% {    text-shadow: #39c5bb 0 0 5px;  }  100% {    text-shadow: #5636ed 0 0 5px;  }}/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {  background: linear-gradient(    -45deg,    #e8d8b9,    #eccec5,    #a3e9eb,    #bdbdf0,    #eec1ea  );  box-shadow: 0 0 5px rgb(66, 68, 68);  position: relative;  background-size: 400% 400%;  -webkit-animation: Gradient 10s ease infinite;  -moz-animation: Gradient 10s ease infinite;  animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@-moz-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content > .card-widget.card-info {  background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content > .card-widget.card-info > #card-info-btn {  background-color: #3eb8be;  border-radius: 8px;}:root {  --trans-light: rgba(255, 255, 255, 0.88);  --trans-dark: rgba(25, 25, 25, 0.88);  --border-style: 1px solid rgb(169, 169, 169);  --backdrop-filter: blur(5px) saturate(150%);}/* 首页文章卡片 */#recent-posts > .recent-post-item {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border-radius: 25px;  border: var(--border-style);}/* 首页侧栏卡片 */#aside-content .card-widget {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border-radius: 18px;  border: var(--border-style);}/* 文章页、归档页、普通页面 */div#post,div#page,div#archive {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border: var(--border-style);  border-radius: 20px;}/* 导航栏 */#page-header.nav-fixed #nav {  background: rgba(255, 255, 255, 0.75);  backdrop-filter: var(--backdrop-filter);}[data-theme="dark"] #page-header.nav-fixed #nav {  background: rgba(0, 0, 0, 0.7) !important;}/* 夜间模式遮罩 */[data-theme="dark"] #recent-posts > .recent-post-item,[data-theme="dark"] #aside-content .card-widget,[data-theme="dark"] div#post,[data-theme="dark"] div#archive,[data-theme="dark"] div#page {  background: var(--trans-dark);}/* 夜间模式页脚页头遮罩透明 */[data-theme="dark"] #footer::before {  background: transparent !important;}[data-theme="dark"] #page-header::before {  background: transparent !important;}/* 阅读模式 */.read-mode #aside-content .card-widget {  background: rgba(158, 204, 171, 0.5) !important;}.read-mode div#post {  background: rgba(158, 204, 171, 0.5) !important;}/* 夜间模式下的阅读模式 */[data-theme="dark"] .read-mode #aside-content .card-widget {  background: rgba(25, 25, 25, 0.9) !important;  color: #ffffff;}[data-theme="dark"] .read-mode div#post {  background: rgba(25, 25, 25, 0.9) !important;  color: #ffffff;}/* 鼠标样式 */#cursor {  position: fixed;  width: 16px;  height: 16px;  /* 这里改变跟随的底色 */  background: rgb(57, 197, 187);  border-radius: 8px;  opacity: 0.25;  z-index: 10086;  pointer-events: none;  transition: 0.2s ease-in-out;  transition-property: background, opacity, transform;}#cursor.hidden {  opacity: 0;}#cursor.hover {  opacity: 0.1;  transform: scale(2.5);  -webkit-transform: scale(2.5);  -moz-transform: scale(2.5);  -ms-transform: scale(2.5);  -o-transform: scale(2.5);}#cursor.active {  opacity: 0.5;  transform: scale(0.5);  -webkit-transform: scale(0.5);  -moz-transform: scale(0.5);  -ms-transform: scale(0.5);  -o-transform: scale(0.5);}svg.icon {  width: 1.28em;  height: 1.28em;  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;}/* 文章页H1-H6图标样式效果 *//* 控制风车转动速度 4s那里可以自己调节快慢 */h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {  -webkit-animation: ccc 4s linear infinite;  animation: ccc 4s linear infinite;}/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */@-webkit-keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}/* 设置风车颜色 */#content-inner.layout h1::before {  color: #ef50a8;  margin-left: -1.55rem;  font-size: 1.3rem;  margin-top: -0.23rem;}#content-inner.layout h2::before {  color: #fb7061;  margin-left: -1.35rem;  font-size: 1.1rem;  margin-top: -0.12rem;}#content-inner.layout h3::before {  color: #ffbf00;  margin-left: -1.22rem;  font-size: 0.95rem;  margin-top: -0.09rem;}#content-inner.layout h4::before {  color: #a9e000;  margin-left: -1.05rem;  font-size: 0.8rem;  margin-top: -0.09rem;}#content-inner.layout h5::before {  color: #57c850;  margin-left: -0.9rem;  font-size: 0.7rem;  margin-top: 0rem;}#content-inner.layout h6::before {  color: #5ec1e0;  margin-left: -0.9rem;  font-size: 0.66rem;  margin-top: 0rem;}/* s设置风车hover动效 6s那里可以自己调节快慢*/#content-inner.layout h1:hover,#content-inner.layout h2:hover,#content-inner.layout h3:hover,#content-inner.layout h4:hover,#content-inner.layout h5:hover,#content-inner.layout h6:hover {  color: var(--theme-color);}#content-inner.layout h1:hover::before,#content-inner.layout h2:hover::before,#content-inner.layout h3:hover::before,#content-inner.layout h4:hover::before,#content-inner.layout h5:hover::before,#content-inner.layout h6:hover::before {  color: var(--theme-color);  -webkit-animation: ccc 6s linear infinite;  animation: ccc 6s linear infinite;}/* 全局宽度 */.layout {  max-width: 1400px;}/* 侧边卡片栏宽度 */.aside-content {  max-width: 318px;  min-width: 300px;}/* 平板尺寸自适应(不启用侧边栏宽度限制) */@media screen and (max-width: 900px) {  .aside-content {    max-width: none !important;    padding: 0 5px 0 5px;  }}/* 除了首页以外其他页面隐藏卡片，并采用宽屏显示 */#archive,#page,#category,#tag {  width: 100%;}.page:not(.page.home) .aside-content {  display: none;}/* 帧率检测 */#fps {  position: fixed;  /* 指定位置 */  left: 50px;  top: 10px;  z-index: 1919810;}[data-theme="light"] #fps {  background-color: rgba(255, 255, 255, 0.85);  backdrop-filter: var(--backdrop-filter);  padding: 4px;  border-radius: 4px;}[data-theme="dark"] #fps {  background-color: rgba(0, 0, 0, 0.72);  backdrop-filter: var(--backdrop-filter);  padding: 4px;  border-radius: 4px;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/kslink.css"/>
-      <url>/css/kslink.css</url>
-      
-        <content type="html"><![CDATA[/* 添加友链按钮 *//* 快速填写格式 */.addBtn {    display: flex;    justify-content: center;    flex-wrap: wrap;}.addBtn button {    transition: .2s;    display: flex;    margin: 5px auto;    color: var(--global-bg);    padding: 15px;    border-radius: 40px;    background: var(--search-result-title);    align-items: center;}button {    padding: 0;    outline: 0;    border: none;    background: 0 0;    cursor: pointer;    touch-action: manipulation;}.fa-solid, .fas {    font-family: "Font Awesome 6 Free";    font-weight: 900;}.addBtn i {    font-size: 1.3rem;    margin-right: 10px;}.addBtn button:hover {    background: var(--theme-color);    color: #121212;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/head.css"/>
-      <url>/css/head.css</url>
-      
-        <content type="html"><![CDATA[/* 波浪css */.main-hero-waves-area {    width: 100%;    position: absolute;    left: 0;    bottom: -11px;    z-index: 5;  }  .waves-area .waves-svg {    width: 100%;    height: 5rem;  }  /* Animation */    .parallax > use {    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;  }  .parallax > use:nth-child(1) {    animation-delay: -2s;    animation-duration: 7s;    fill: #f7f9febd;  }  .parallax > use:nth-child(2) {    animation-delay: -3s;    animation-duration: 10s;    fill: #f7f9fe82;  }  .parallax > use:nth-child(3) {    animation-delay: -4s;    animation-duration: 13s;    fill: #f7f9fe36;  }  .parallax > use:nth-child(4) {    animation-delay: -5s;    animation-duration: 20s;    fill: #f7f9fe;  }  /* 黑色模式背景 */  [data-theme="dark"] .parallax > use:nth-child(1) {    animation-delay: -2s;    animation-duration: 7s;    fill: #18171dc8;  }  [data-theme="dark"] .parallax > use:nth-child(2) {    animation-delay: -3s;    animation-duration: 10s;    fill: #18171d80;  }  [data-theme="dark"] .parallax > use:nth-child(3) {    animation-delay: -4s;    animation-duration: 13s;    fill: #18171d3e;  }  [data-theme="dark"] .parallax > use:nth-child(4) {    animation-delay: -5s;    animation-duration: 20s;    fill: #18171d;  }    @keyframes move-forever {    0% {      transform: translate3d(-90px, 0, 0);    }    100% {      transform: translate3d(85px, 0, 0);    }  }  /*Shrinking for mobile*/  @media (max-width: 768px) {    .waves-area .waves-svg {      height: 40px;      min-height: 40px;    }  }]]></content>
       
     </entry>
     
@@ -231,10 +214,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/universe.css"/>
-      <url>/css/universe.css</url>
+      <link href="/css/cat.css"/>
+      <url>/css/cat.css</url>
       
-        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe{    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;  }  .loading-img {    background: url(https://img-2s2.pages.dev/img/头像.jpg) no-repeat center center;    background-size: cover;  }]]></content>
+        <content type="html"><![CDATA[body::-webkit-scrollbar {    width: 0;}.neko {    width: 64px;    height: 64px;    background-image: url("https://bu.dusays.com/2022/07/20/62d812db74be9.png");    position: absolute;    right: 32px;    background-repeat: no-repeat;    background-size: contain;    transform: translateX(50%);    cursor: pointer;    font-family: tzy;    font-weight: 600;    font-size: 16px;    color: #6f42c1;    display: none;}.neko::after {    display: none;    width: 100px;    height: 100px;    background-image: url("https://bu.dusays.com/2022/07/20/62d812d95e6f5.png");    background-size: contain;    z-index: 9999;    position: absolute;    right: 50%;    text-align: center;    line-height: 100px;    top: -115%;}.neko.showMsg::after {    content: attr(data-msg);    display: block;    overflow: hidden;    text-overflow: ellipsis;}.neko:hover::after {    content: attr(data-msg);    display: block;    overflow: hidden;    text-overflow: ellipsis;}.neko.fontColor::after {    color: #333;}/** * @description: 滚动条样式  跟猫二选一 */@media screen and (max-width:992px) {    ::-webkit-scrollbar {        width: 8px !important;        height: 8px !important    }    ::-webkit-scrollbar-track {        border-radius: 2em;    }    ::-webkit-scrollbar-thumb {        background-color: rgb(255 255 255 / .3);        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);        border-radius: 2em    }    ::-webkit-scrollbar-corner {        background-color: transparent    }}]]></content>
       
     </entry>
     
@@ -242,10 +225,65 @@
     
     <entry>
       <title></title>
-      <link href="/css/readPercent.css"/>
-      <url>/css/readPercent.css</url>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[/* 返回顶部 */button#go-up #percent {    display: none;    font-weight: bold;    font-size: 15px !important;}button#go-up span {    font-size: 12px!important;    margin-right: -1px;}/* 鼠标滑动到按钮上时显示返回顶部图标 */button#go-up:hover i {    display: block !important;}button#go-up:hover #percent {    display: none !important;}]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }  /* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {  background: #1e1e1e;  color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {  background: #3ecdf1;  color: #f2f2f2;}@font-face {  /* 为载入的字体取名字(随意) */  font-family: 'YSHST';  /* 字体文件地址(相对或者绝对路径都可以) */  src: url(/font/WenDaoYiRenTi-2.ttf);  /* 定义加粗样式(加粗多少) */  font-weight: normal;  /* 定义字体样式(斜体/非斜体) */  font-style: normal;  /* 定义显示样式 */  font-display: block;}/* 翻页按钮居中*/#pagination {  width: 100%;  margin: auto;} /* 一级菜单居中 */#nav .menus_items {  position: absolute !important;  width: fit-content !important;  left: 50% !important;  transform: translateX(-50%) !important;}/* 子菜单横向展示 */#nav .menus_items .menus_item:hover .menus_item_child {  display: flex !important;}/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */.menus_items .menus_item:nth-child(2) .menus_item_child {  left: -125px;}/*黑夜霓虹灯*//* 日间模式不生效 */[data-theme="light"] #site-name,[data-theme="light"] #site-title,[data-theme="light"] #site-subtitle,[data-theme="light"] #post-info {  animation: none;}/* 夜间模式生效 */[data-theme="dark"] #site-name,[data-theme="dark"] #site-title {  animation: light_15px 10s linear infinite;}[data-theme="dark"] #site-subtitle {  animation: light_10px 10s linear infinite;}[data-theme="dark"] #post-info {  animation: light_5px 10s linear infinite;}/* 关键帧描述 */@keyframes light_15px {  0% {    text-shadow: #5636ed 0 0 15px;  }  12.5% {    text-shadow: #11ee5e 0 0 15px;  }  25% {    text-shadow: #f14747 0 0 15px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 15px;  }  50% {    text-shadow: #b347f1 0 0 15px;  }  62.5% {    text-shadow: #002afa 0 0 15px;  }  75% {    text-shadow: #ed709b 0 0 15px;  }  87.5% {    text-shadow: #39c5bb 0 0 15px;  }  100% {    text-shadow: #5636ed 0 0 15px;  }}@keyframes light_10px {  0% {    text-shadow: #5636ed 0 0 10px;  }  12.5% {    text-shadow: #11ee5e 0 0 10px;  }  25% {    text-shadow: #f14747 0 0 10px;  }  37.5% {    text-shadow: #f1a247 0 0 10px;  }  50% {    text-shadow: #f1ee47 0 0 10px;  }  50% {    text-shadow: #b347f1 0 0 10px;  }  62.5% {    text-shadow: #002afa 0 0 10px;  }  75% {    text-shadow: #ed709b 0 0 10px;  }  87.5% {    text-shadow: #39c5bb 0 0 10px;  }  100% {    text-shadow: #5636ed 0 0 10px;  }}@keyframes light_5px {  0% {    text-shadow: #5636ed 0 0 5px;  }  12.5% {    text-shadow: #11ee5e 0 0 5px;  }  25% {    text-shadow: #f14747 0 0 5px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 5px;  }  50% {    text-shadow: #b347f1 0 0 5px;  }  62.5% {    text-shadow: #002afa 0 0 5px;  }  75% {    text-shadow: #ed709b 0 0 5px;  }  87.5% {    text-shadow: #39c5bb 0 0 5px;  }  100% {    text-shadow: #5636ed 0 0 5px;  }}/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {  background: linear-gradient(    -45deg,    #e8d8b9,    #eccec5,    #a3e9eb,    #bdbdf0,    #eec1ea  );  box-shadow: 0 0 5px rgb(66, 68, 68);  position: relative;  background-size: 400% 400%;  -webkit-animation: Gradient 10s ease infinite;  -moz-animation: Gradient 10s ease infinite;  animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@-moz-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content > .card-widget.card-info {  background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content > .card-widget.card-info > #card-info-btn {  background-color: #3eb8be;  border-radius: 8px;}:root {  --trans-light: rgba(255, 255, 255, 0.88);  --trans-dark: rgba(25, 25, 25, 0.88);  --border-style: 1px solid rgb(169, 169, 169);  --backdrop-filter: blur(5px) saturate(150%);}/* 首页文章卡片 */#recent-posts > .recent-post-item {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border-radius: 25px;  border: var(--border-style);}/* 首页侧栏卡片 */#aside-content .card-widget {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border-radius: 18px;  border: var(--border-style);}/* 文章页、归档页、普通页面 */div#post,div#page,div#archive {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border: var(--border-style);  border-radius: 20px;}/* 导航栏 */#page-header.nav-fixed #nav {  background: rgba(255, 255, 255, 0.75);  backdrop-filter: var(--backdrop-filter);}[data-theme="dark"] #page-header.nav-fixed #nav {  background: rgba(0, 0, 0, 0.7) !important;}/* 夜间模式遮罩 */[data-theme="dark"] #recent-posts > .recent-post-item,[data-theme="dark"] #aside-content .card-widget,[data-theme="dark"] div#post,[data-theme="dark"] div#archive,[data-theme="dark"] div#page {  background: var(--trans-dark);}/* 夜间模式页脚页头遮罩透明 */[data-theme="dark"] #footer::before {  background: transparent !important;}[data-theme="dark"] #page-header::before {  background: transparent !important;}/* 阅读模式 */.read-mode #aside-content .card-widget {  background: rgba(158, 204, 171, 0.5) !important;}.read-mode div#post {  background: rgba(158, 204, 171, 0.5) !important;}/* 夜间模式下的阅读模式 */[data-theme="dark"] .read-mode #aside-content .card-widget {  background: rgba(25, 25, 25, 0.9) !important;  color: #ffffff;}[data-theme="dark"] .read-mode div#post {  background: rgba(25, 25, 25, 0.9) !important;  color: #ffffff;}/* 鼠标样式 */#cursor {  position: fixed;  width: 16px;  height: 16px;  /* 这里改变跟随的底色 */  background: rgb(57, 197, 187);  border-radius: 8px;  opacity: 0.25;  z-index: 10086;  pointer-events: none;  transition: 0.2s ease-in-out;  transition-property: background, opacity, transform;}#cursor.hidden {  opacity: 0;}#cursor.hover {  opacity: 0.1;  transform: scale(2.5);  -webkit-transform: scale(2.5);  -moz-transform: scale(2.5);  -ms-transform: scale(2.5);  -o-transform: scale(2.5);}#cursor.active {  opacity: 0.5;  transform: scale(0.5);  -webkit-transform: scale(0.5);  -moz-transform: scale(0.5);  -ms-transform: scale(0.5);  -o-transform: scale(0.5);}svg.icon {  width: 1.28em;  height: 1.28em;  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;}/* 文章页H1-H6图标样式效果 *//* 控制风车转动速度 4s那里可以自己调节快慢 */h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {  -webkit-animation: ccc 4s linear infinite;  animation: ccc 4s linear infinite;}/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */@-webkit-keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}/* 设置风车颜色 */#content-inner.layout h1::before {  color: #ef50a8;  margin-left: -1.55rem;  font-size: 1.3rem;  margin-top: -0.23rem;}#content-inner.layout h2::before {  color: #fb7061;  margin-left: -1.35rem;  font-size: 1.1rem;  margin-top: -0.12rem;}#content-inner.layout h3::before {  color: #ffbf00;  margin-left: -1.22rem;  font-size: 0.95rem;  margin-top: -0.09rem;}#content-inner.layout h4::before {  color: #a9e000;  margin-left: -1.05rem;  font-size: 0.8rem;  margin-top: -0.09rem;}#content-inner.layout h5::before {  color: #57c850;  margin-left: -0.9rem;  font-size: 0.7rem;  margin-top: 0rem;}#content-inner.layout h6::before {  color: #5ec1e0;  margin-left: -0.9rem;  font-size: 0.66rem;  margin-top: 0rem;}/* s设置风车hover动效 6s那里可以自己调节快慢*/#content-inner.layout h1:hover,#content-inner.layout h2:hover,#content-inner.layout h3:hover,#content-inner.layout h4:hover,#content-inner.layout h5:hover,#content-inner.layout h6:hover {  color: var(--theme-color);}#content-inner.layout h1:hover::before,#content-inner.layout h2:hover::before,#content-inner.layout h3:hover::before,#content-inner.layout h4:hover::before,#content-inner.layout h5:hover::before,#content-inner.layout h6:hover::before {  color: var(--theme-color);  -webkit-animation: ccc 6s linear infinite;  animation: ccc 6s linear infinite;}/* 全局宽度 */.layout {  max-width: 1400px;}/* 侧边卡片栏宽度 */.aside-content {  max-width: 318px;  min-width: 300px;}/* 平板尺寸自适应(不启用侧边栏宽度限制) */@media screen and (max-width: 900px) {  .aside-content {    max-width: none !important;    padding: 0 5px 0 5px;  }}/* 除了首页以外其他页面隐藏卡片，并采用宽屏显示 */#archive,#page,#category,#tag {  width: 100%;}.page:not(.page.home) .aside-content {  display: none;}/* 帧率检测 */#fps {  position: fixed;  /* 指定位置 */  left: 50px;  top: 10px;  z-index: 1919810;}[data-theme="light"] #fps {  background-color: rgba(255, 255, 255, 0.85);  backdrop-filter: var(--backdrop-filter);  padding: 4px;  border-radius: 4px;}[data-theme="dark"] #fps {  background-color: rgba(0, 0, 0, 0.72);  backdrop-filter: var(--backdrop-filter);  padding: 4px;  border-radius: 4px;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/head.css"/>
+      <url>/css/head.css</url>
+      
+        <content type="html"><![CDATA[/* 波浪css */.main-hero-waves-area {    width: 100%;    position: absolute;    left: 0;    bottom: -11px;    z-index: 5;  }  .waves-area .waves-svg {    width: 100%;    height: 5rem;  }  /* Animation */    .parallax > use {    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;  }  .parallax > use:nth-child(1) {    animation-delay: -2s;    animation-duration: 7s;    fill: #f7f9febd;  }  .parallax > use:nth-child(2) {    animation-delay: -3s;    animation-duration: 10s;    fill: #f7f9fe82;  }  .parallax > use:nth-child(3) {    animation-delay: -4s;    animation-duration: 13s;    fill: #f7f9fe36;  }  .parallax > use:nth-child(4) {    animation-delay: -5s;    animation-duration: 20s;    fill: #f7f9fe;  }  /* 黑色模式背景 */  [data-theme="dark"] .parallax > use:nth-child(1) {    animation-delay: -2s;    animation-duration: 7s;    fill: #18171dc8;  }  [data-theme="dark"] .parallax > use:nth-child(2) {    animation-delay: -3s;    animation-duration: 10s;    fill: #18171d80;  }  [data-theme="dark"] .parallax > use:nth-child(3) {    animation-delay: -4s;    animation-duration: 13s;    fill: #18171d3e;  }  [data-theme="dark"] .parallax > use:nth-child(4) {    animation-delay: -5s;    animation-duration: 20s;    fill: #18171d;  }    @keyframes move-forever {    0% {      transform: translate3d(-90px, 0, 0);    }    100% {      transform: translate3d(85px, 0, 0);    }  }  /*Shrinking for mobile*/  @media (max-width: 768px) {    .waves-area .waves-svg {      height: 40px;      min-height: 40px;    }  }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<p><div class="addBtn"><button onclick="leonus.linkCom()"><i class="fa-solid fa-circle-plus"></i>快速申请 (默认样式)</button> <button onclick="leonus.linkCom(&quot;bf&quot;)"><i class="fa-solid fa-circle-plus"></i>快速申请 (Butterfly)</button></div></p><p><link rel="stylesheet" href="/css/kslink.css"></p><script src="/js/kslink.js"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/kslink.css"/>
+      <url>/css/kslink.css</url>
+      
+        <content type="html"><![CDATA[/* 添加友链按钮 *//* 快速填写格式 */.addBtn {    display: flex;    justify-content: center;    flex-wrap: wrap;}.addBtn button {    transition: .2s;    display: flex;    margin: 5px auto;    color: var(--global-bg);    padding: 15px;    border-radius: 40px;    background: var(--search-result-title);    align-items: center;}button {    padding: 0;    outline: 0;    border: none;    background: 0 0;    cursor: pointer;    touch-action: manipulation;}.fa-solid, .fas {    font-family: "Font Awesome 6 Free";    font-weight: 900;}.addBtn i {    font-size: 1.3rem;    margin-right: 10px;}.addBtn button:hover {    background: var(--theme-color);    color: #121212;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/cursor.js"/>
+      <url>/js/cursor.js</url>
+      
+        <content type="html"><![CDATA[var CURSOR;Math.lerp = (a, b, n) => (1 - n) * a + n * b;const getStyle = (el, attr) => {  try {    return window.getComputedStyle      ? window.getComputedStyle(el)[attr]      : el.currentStyle[attr];  } catch (e) {}  return "";};class Cursor {  constructor() {    this.pos = { curr: null, prev: null };    this.pt = [];    this.create();    this.init();    this.render();  }  move(left, top) {    this.cursor.style["left"] = `${left}px`;    this.cursor.style["top"] = `${top}px`;  }  create() {    if (!this.cursor) {      this.cursor = document.createElement("div");      this.cursor.id = "cursor";      this.cursor.classList.add("hidden");      document.body.append(this.cursor);    }    var el = document.getElementsByTagName("*");    for (let i = 0; i < el.length; i++)      if (getStyle(el[i], "cursor") == "pointer") this.pt.push(el[i].outerHTML);    document.body.appendChild((this.scr = document.createElement("style")));    // 这里改变鼠标指针的颜色 由svg生成    this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='.5'/></svg>") 4 4, auto}`;  }  refresh() {    this.scr.remove();    this.cursor.classList.remove("hover");    this.cursor.classList.remove("active");    this.pos = { curr: null, prev: null };    this.pt = [];    this.create();    this.init();    this.render();  }  init() {    document.onmouseover = (e) =>      this.pt.includes(e.target.outerHTML) &&      this.cursor.classList.add("hover");    document.onmouseout = (e) =>      this.pt.includes(e.target.outerHTML) &&      this.cursor.classList.remove("hover");    document.onmousemove = (e) => {      this.pos.curr == null && this.move(e.clientX - 8, e.clientY - 8);      this.pos.curr = { x: e.clientX - 8, y: e.clientY - 8 };      this.cursor.classList.remove("hidden");    };    document.onmouseenter = (e) => this.cursor.classList.remove("hidden");    document.onmouseleave = (e) => this.cursor.classList.add("hidden");    document.onmousedown = (e) => this.cursor.classList.add("active");    document.onmouseup = (e) => this.cursor.classList.remove("active");  }  render() {    if (this.pos.prev) {      this.pos.prev.x = Math.lerp(this.pos.prev.x, this.pos.curr.x, 0.15);      this.pos.prev.y = Math.lerp(this.pos.prev.y, this.pos.curr.y, 0.15);      this.move(this.pos.prev.x, this.pos.prev.y);    } else {      this.pos.prev = this.pos.curr;    }    requestAnimationFrame(() => this.render());  }}(() => {  CURSOR = new Cursor();  // 需要重新获取列表时，使用 CURSOR.refresh()})();]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/progress_bar.css"/>
+      <url>/css/progress_bar.css</url>
+      
+        <content type="html"><![CDATA[.pace {    -webkit-pointer-events: none;    pointer-events: none;    -webkit-user-select: none;    -moz-user-select: none;    user-select: none;    z-index: 2000;    position: fixed;    margin: auto;    top: 10px;    left: 0;    right: 0;    height: 8px;    border-radius: 8px;    width: 4rem;    background: #eaecf2;    border: 1px #e3e8f7;    overflow: hidden;  }    .pace-inactive .pace-progress {    opacity: 0;    transition: 0.5s ease-in;  }    .pace .pace-progress {    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;    -ms-box-sizing: border-box;    -o-box-sizing: border-box;    box-sizing: border-box;    -webkit-transform: translate3d(0, 0, 0);    -moz-transform: translate3d(0, 0, 0);    -ms-transform: translate3d(0, 0, 0);    -o-transform: translate3d(0, 0, 0);    transform: translate3d(0, 0, 0);    max-width: 200px;    position: absolute;    z-index: 2000;    display: block;    top: 0;    right: 100%;    height: 100%;    width: 100%;    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);    animation: gradient 1.5s ease infinite;    background-size: 200%;  }    .pace.pace-inactive {    opacity: 0;    transition: 0.5s;    top: -8px;  }  @keyframes gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }]]></content>
       
     </entry>
     
@@ -264,10 +302,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/kslink.js"/>
-      <url>/js/kslink.js</url>
+      <link href="/css/readPercent.css"/>
+      <url>/css/readPercent.css</url>
       
-        <content type="html"><![CDATA[var leonus = {    linkCom: e => {        var t = document.querySelector(".el-textarea__inner");        "bf" == e ? (t.value = "```yml\n", t.value += "- name: \n  link: \n  avatar: \n  descr: \n  siteshot: ", t.value += "\n```", t.setSelectionRange(15, 15)) : (t.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图：", t.setSelectionRange(5, 5)), t.focus()    },    owoBig: () => {        if (!document.getElementById("post-comment") || document.body.clientWidth < 768) return;        let e = 1,            t = "",            o = document.createElement("div"),            n = document.querySelector("body");        o.id = "owo-big", n.appendChild(o), new MutationObserver((l => {            for (let a = 0; a < l.length; a++) {                let i = l[a].addedNodes,                    s = "";                if (2 == i.length && "OwO-body" == i[1].className) s = i[1];                else {                    if (1 != i.length || "tk-comment" != i[0].className) continue;                    s = i[0]                }                s.onmouseover = l => {                    e && ("OwO-body" == s.className && "IMG" == l.target.tagName || "tk-owo-emotion" == l.target.className) && (e = 0, t = setTimeout((() => {                        let e = 3 * l.path[0].clientHeight,                            t = 3 * l.path[0].clientWidth,                            a = l.x - l.offsetX - (t - l.path[0].clientWidth) / 2,                            i = l.y - l.offsetY;                        a + t > n.clientWidth && (a -= a + t - n.clientWidth + 10), a < 0 && (a = 10), o.style.cssText = `display:flex; height:${e}px; width:${t}px; left:${a}px; top:${i}px;`, o.innerHTML = `<img src="${l.target.src}">`                    }), 300))                }, s.onmouseout = () => {                    o.style.display = "none", e = 1, clearTimeout(t)                }            }        })).observe(document.getElementById("post-comment"), {            subtree: !0,            childList: !0        })    },};]]></content>
+        <content type="html"><![CDATA[/* 返回顶部 */button#go-up #percent {    display: none;    font-weight: bold;    font-size: 15px !important;}button#go-up span {    font-size: 12px!important;    margin-right: -1px;}/* 鼠标滑动到按钮上时显示返回顶部图标 */button#go-up:hover i {    display: block !important;}button#go-up:hover #percent {    display: none !important;}]]></content>
       
     </entry>
     
@@ -297,10 +335,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/runtime.js"/>
-      <url>/js/runtime.js</url>
+      <link href="/css/universe.css"/>
+      <url>/css/universe.css</url>
       
-        <content type="html"><![CDATA[setInterval(() => {  let create_time = Math.round(new Date('2023-05-25 00:00:00').getTime() / 1000); //在此行修改建站时间  let timestamp = Math.round((new Date().getTime()) / 1000);  let second = timestamp - create_time;  let time = new Array(0, 0, 0, 0, 0);  var nol = function(h){    return h>9?h:'0'+h;  }  if (second >= 365 * 24 * 3600) {    time[0] = parseInt(second / (365 * 24 * 3600));    second %= 365 * 24 * 3600;  }  if (second >= 24 * 3600) {    time[1] = parseInt(second / (24 * 3600));    second %= 24 * 3600;  }  if (second >= 3600) {    time[2] = nol(parseInt(second / 3600));    second %= 3600;  }  if (second >= 60) {    time[3] = nol(parseInt(second / 60));    second %= 60;  }  if (second > 0) {    time[4] = nol(second);  }  if ((Number(time[2])<22) && (Number(time[2])>7)){    currentTimeHtml ="<img class='boardsign' src='https://img.shields.io/badge/糖果屋-营业中-6adea8?style=social&logo=cakephp' title='距离百年老店也就差不到一百年~'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';  }  else{    currentTimeHtml ="<img class='boardsign' src='https://img.shields.io/badge/糖果屋-打烊了-6adea8?style=social&logo=coffeescript' title='这个点了应该去睡觉啦，熬夜对身体不好哦'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';  }  document.getElementById("workboard").innerHTML = currentTimeHtml;}, 1000);]]></content>
+        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe{    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;  }  .loading-img {    background: url(https://img-2s2.pages.dev/img/头像.jpg) no-repeat center center;    background-size: cover;  }]]></content>
       
     </entry>
     
@@ -308,10 +346,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/cursor.js"/>
-      <url>/js/cursor.js</url>
+      <link href="/js/kslink.js"/>
+      <url>/js/kslink.js</url>
       
-        <content type="html"><![CDATA[var CURSOR;Math.lerp = (a, b, n) => (1 - n) * a + n * b;const getStyle = (el, attr) => {  try {    return window.getComputedStyle      ? window.getComputedStyle(el)[attr]      : el.currentStyle[attr];  } catch (e) {}  return "";};class Cursor {  constructor() {    this.pos = { curr: null, prev: null };    this.pt = [];    this.create();    this.init();    this.render();  }  move(left, top) {    this.cursor.style["left"] = `${left}px`;    this.cursor.style["top"] = `${top}px`;  }  create() {    if (!this.cursor) {      this.cursor = document.createElement("div");      this.cursor.id = "cursor";      this.cursor.classList.add("hidden");      document.body.append(this.cursor);    }    var el = document.getElementsByTagName("*");    for (let i = 0; i < el.length; i++)      if (getStyle(el[i], "cursor") == "pointer") this.pt.push(el[i].outerHTML);    document.body.appendChild((this.scr = document.createElement("style")));    // 这里改变鼠标指针的颜色 由svg生成    this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='.5'/></svg>") 4 4, auto}`;  }  refresh() {    this.scr.remove();    this.cursor.classList.remove("hover");    this.cursor.classList.remove("active");    this.pos = { curr: null, prev: null };    this.pt = [];    this.create();    this.init();    this.render();  }  init() {    document.onmouseover = (e) =>      this.pt.includes(e.target.outerHTML) &&      this.cursor.classList.add("hover");    document.onmouseout = (e) =>      this.pt.includes(e.target.outerHTML) &&      this.cursor.classList.remove("hover");    document.onmousemove = (e) => {      this.pos.curr == null && this.move(e.clientX - 8, e.clientY - 8);      this.pos.curr = { x: e.clientX - 8, y: e.clientY - 8 };      this.cursor.classList.remove("hidden");    };    document.onmouseenter = (e) => this.cursor.classList.remove("hidden");    document.onmouseleave = (e) => this.cursor.classList.add("hidden");    document.onmousedown = (e) => this.cursor.classList.add("active");    document.onmouseup = (e) => this.cursor.classList.remove("active");  }  render() {    if (this.pos.prev) {      this.pos.prev.x = Math.lerp(this.pos.prev.x, this.pos.curr.x, 0.15);      this.pos.prev.y = Math.lerp(this.pos.prev.y, this.pos.curr.y, 0.15);      this.move(this.pos.prev.x, this.pos.prev.y);    } else {      this.pos.prev = this.pos.curr;    }    requestAnimationFrame(() => this.render());  }}(() => {  CURSOR = new Cursor();  // 需要重新获取列表时，使用 CURSOR.refresh()})();]]></content>
+        <content type="html"><![CDATA[var leonus = {    linkCom: e => {        var t = document.querySelector(".el-textarea__inner");        "bf" == e ? (t.value = "```yml\n", t.value += "- name: \n  link: \n  avatar: \n  descr: \n  siteshot: ", t.value += "\n```", t.setSelectionRange(15, 15)) : (t.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图：", t.setSelectionRange(5, 5)), t.focus()    },    owoBig: () => {        if (!document.getElementById("post-comment") || document.body.clientWidth < 768) return;        let e = 1,            t = "",            o = document.createElement("div"),            n = document.querySelector("body");        o.id = "owo-big", n.appendChild(o), new MutationObserver((l => {            for (let a = 0; a < l.length; a++) {                let i = l[a].addedNodes,                    s = "";                if (2 == i.length && "OwO-body" == i[1].className) s = i[1];                else {                    if (1 != i.length || "tk-comment" != i[0].className) continue;                    s = i[0]                }                s.onmouseover = l => {                    e && ("OwO-body" == s.className && "IMG" == l.target.tagName || "tk-owo-emotion" == l.target.className) && (e = 0, t = setTimeout((() => {                        let e = 3 * l.path[0].clientHeight,                            t = 3 * l.path[0].clientWidth,                            a = l.x - l.offsetX - (t - l.path[0].clientWidth) / 2,                            i = l.y - l.offsetY;                        a + t > n.clientWidth && (a -= a + t - n.clientWidth + 10), a < 0 && (a = 10), o.style.cssText = `display:flex; height:${e}px; width:${t}px; left:${a}px; top:${i}px;`, o.innerHTML = `<img src="${l.target.src}">`                    }), 300))                }, s.onmouseout = () => {                    o.style.display = "none", e = 1, clearTimeout(t)                }            }        })).observe(document.getElementById("post-comment"), {            subtree: !0,            childList: !0        })    },};]]></content>
       
     </entry>
     
@@ -341,21 +379,21 @@
     
     <entry>
       <title></title>
-      <link href="/js/title.js"/>
-      <url>/js/title.js</url>
+      <link href="/js/runtime.js"/>
+      <url>/js/runtime.js</url>
       
-        <content type="html"><![CDATA[//动态标题var OriginTitile = document.title;var titleTime;document.addEventListener('visibilitychange', function () {  if (document.hidden) {    //离开当前页面时标签显示内容    document.title = '👀跑哪里去了~';    clearTimeout(titleTime);  } else {    //返回当前页面时标签显示内容    document.title = '🐖抓到你啦～';    //两秒后变回正常标题    titleTime = setTimeout(function () {      document.title = OriginTitile;    }, 2000);  }});]]></content>
+        <content type="html"><![CDATA[setInterval(() => {  let create_time = Math.round(new Date('2023-05-25 00:00:00').getTime() / 1000); //在此行修改建站时间  let timestamp = Math.round((new Date().getTime()) / 1000);  let second = timestamp - create_time;  let time = new Array(0, 0, 0, 0, 0);  var nol = function(h){    return h>9?h:'0'+h;  }  if (second >= 365 * 24 * 3600) {    time[0] = parseInt(second / (365 * 24 * 3600));    second %= 365 * 24 * 3600;  }  if (second >= 24 * 3600) {    time[1] = parseInt(second / (24 * 3600));    second %= 24 * 3600;  }  if (second >= 3600) {    time[2] = nol(parseInt(second / 3600));    second %= 3600;  }  if (second >= 60) {    time[3] = nol(parseInt(second / 60));    second %= 60;  }  if (second > 0) {    time[4] = nol(second);  }  if ((Number(time[2])<22) && (Number(time[2])>7)){    currentTimeHtml ="<img class='boardsign' src='https://img.shields.io/badge/糖果屋-营业中-6adea8?style=social&logo=cakephp' title='距离百年老店也就差不到一百年~'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';  }  else{    currentTimeHtml ="<img class='boardsign' src='https://img.shields.io/badge/糖果屋-打烊了-6adea8?style=social&logo=coffeescript' title='这个点了应该去睡觉啦，熬夜对身体不好哦'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';  }  document.getElementById("workboard").innerHTML = currentTimeHtml;}, 1000);]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
-        <content type="html"><![CDATA[<p><div class="addBtn"><button onclick="leonus.linkCom()"><i class="fa-solid fa-circle-plus"></i>快速申请 (默认样式)</button> <button onclick="leonus.linkCom(&quot;bf&quot;)"><i class="fa-solid fa-circle-plus"></i>快速申请 (Butterfly)</button></div></p><p><link rel="stylesheet" href="/css/kslink.css"></p><script src="/js/kslink.js"></script>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -384,11 +422,11 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title></title>
+      <link href="/js/title.js"/>
+      <url>/js/title.js</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[//动态标题var OriginTitile = document.title;var titleTime;document.addEventListener('visibilitychange', function () {  if (document.hidden) {    //离开当前页面时标签显示内容    document.title = '👀跑哪里去了~';    clearTimeout(titleTime);  } else {    //返回当前页面时标签显示内容    document.title = '🐖抓到你啦～';    //两秒后变回正常标题    titleTime = setTimeout(function () {      document.title = OriginTitile;    }, 2000);  }});]]></content>
       
     </entry>
     
